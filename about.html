@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tietoa minusta</title>
+    <title>Minusta - Personal Trainer Janne Rongas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>Personal Trainer Janne Rongas</h1>
+        <button class="menu-toggle" aria-label="Avaa valikko">☰</button>
         <nav>
             <ul>
                 <li><a href="index.html">Etusivu</a></li>
                 <li><a href="about.html">Minusta</a></li>
+                <li><a href="about.html" class="active">Minusta</a></li>
                 <li><a href="contact.html">Yhteystiedot</a></li>
             </ul>
         </nav>
@@ -22,11 +25,42 @@
         <h2>Kuka olen?</h2>
         <p>Olen Janne, personal trainer, jolla on kokemusta ja intohimoa auttaa ihmisiä kohti terveempää elämää. Erikoistun myös urheiluun tyypin-1 diabeteksen kanssa.</p>
           <img src="images/Ennen.jpg" alt ="Kuva ennen elämäntapamuutosta kesältä 2024">
-          <img src="images/Jälkeen.jpg" alt ="Kuva nykyisestä kunnosta syksyltö 2025">
+          <img src="images/Jälkeen.jpg" alt ="Kuva nykyisestä kunnosta syksyltä 2025">
+        <section>
+            <h2>Minusta</h2>
+            <p>
+                Olen Janne Rongas, henkilökohtainen valmentaja ja intohimoinen treenaaja.
+                Oma matkani alkoi elämäntapamuutoksesta – ja haluan näyttää, että muutos on mahdollista
+                kenelle tahansa. Alla on kuvat omasta muutoksestani: vasemmalla minä ennen elämäntapamuutosta
+                ja oikealla nykyään.
+            </p>
+
+            <div class="before-after">
+                <div>
+                    <h3>Ennen</h3>
+                    <img src="ennen.jpg" alt="Janne ennen elämäntapamuutosta" class="profile-img">
+                </div>
+                <div>
+                    <h3>Jälkeen</h3>
+                    <img src="jälkeen.jpg" alt="Janne nykyään hyvässä kunnossa" class="profile-img">
+                </div>
+            </div>
+        </section>
     </main>
   
+
     <footer>
         <p>© 2025 Janne Rongas</p>
+        <p>&copy; 2025 Janne Rongas. Kaikki oikeudet pidätetään.</p>
     </footer>
+
+    <script>
+      const menuBtn = document.querySelector(".menu-toggle");
+      const navMenu = document.querySelector("nav ul");
+
+      menuBtn.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+    </script>
 </body>
 </html>
